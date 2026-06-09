@@ -11,18 +11,18 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">
+            <div class="logo" id="homeLogo" style="cursor: pointer;">
                 <img src="Icons/Иконка.png" alt="Логотип" class="logo-icon">
                 <span>Кружок</span>
             </div>
             <div class="nav-links">
-                <a href="#">Главная</a>
+                <a href="#" id="homeNavLink">Главная</a>
                 <a href="#">Комнаты</a>
                 <a href="#">Поддержать</a>
                 <button class="btn-outline">Войти</button>
             </div>
         </div>
-
+    <div id="mainContent">
         <div class="hero">
             <div class="hero-text">
                 <h1>Твоё хобби — <br>в каждом кружке</h1>
@@ -59,7 +59,7 @@
                     <h3>Большой теннис</h3>
                     <p class="desc">Обучение технике ударов, работе ног. Различные подачи, отработка ударов. Подходит для новичков и продвинутых.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Большой теннис">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     <h3>Настольный теннис</h3>
                     <p class="desc">Тактика коротких и длинных подач. Обучение вращениям и постановке ног. Советы по хватке и выбору накладок.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Настольный теннис">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                     <h3>Английский язык</h3>
                     <p class="desc">Тактика запоминания слов через ассоциации. Обучение грамматическим конструкциям. Советы по разговорной практике без стеснения.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Английский язык">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                     <h3>Пляжный футбол</h3>
                     <p class="desc">Тактика игры в меньшинстве на песке. Новости международных пляжных турниров. Обучение правилам (аут ногой, двойное касание).</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Пляжный футбол">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                     <h3>Волейбол</h3>
                     <p class="desc">Подача, приём, блок. Командные тренировки и тактические схемы. Подготовка к школьным соревнованиям.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Волейбол">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                     <h3>Творческая мастерская</h3>
                     <p class="desc">Рисование, лепка, скетчинг. Изучаем разные техники и материалы. Развиваем воображение.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Творческая мастерская">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                     <h3>Юный химик</h3>
                     <p class="desc">Занимательные опыты, безопасные реактивы. Основы химии и научные эксперименты.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Юный химик">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                     <h3>Дизайн</h3>
                     <p class="desc">Тренды и новости в веб-дизайне. Тактика сочетания шрифтов и цветов. Советы по прототипированию в Figma.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Дизайн">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
                     <h3>Киберспорт</h3>
                     <p class="desc">Тактика заходов на точку (CS2) / контроль карты (Dota). Новости мейджоров. Обучение правилам тир-листов и драфта.</p>
                     <div class="card-footer">
-                        <button class="join-btn">Выбрать кружок →</button>
+                        <button class="join-btn" data-room-id="Киберспорт">Выбрать кружок →</button>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
         <div class="add-circle-wrapper">
             <button class="create-room-btn-green"><i class="fas fa-plus"></i> Добавить кружок</button>
         </div>
-
+    </div>
         <footer>
             <p>Кружок — бесплатная платформа для саморазвития детей и подростков. Создавайте комнату, делитесь увлечениями. Поможем узнать новое, открыть для себя другие сферы деятельности и саморазвития.</p>
             <p>© 2025 Кружок | Твоё хобби — в каждом кружке</p>
@@ -166,30 +166,6 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const roomCards = document.querySelectorAll('.room-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filterValue = btn.getAttribute('data-filter');
-                roomCards.forEach(card => {
-                    if (filterValue === 'all') {
-                        card.style.display = 'block';
-                    } else {
-                        const category = card.getAttribute('data-category');
-                        if (category === filterValue) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
