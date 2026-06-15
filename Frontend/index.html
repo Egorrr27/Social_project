@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кружок — твоё хобби в каждом кружке</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3b7b4a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Кружок">
+    <link rel="apple-touch-icon" href="/Icons/Иконка.png">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo" id="homeLogo" style="cursor: pointer;">
+                <img src="/Icons/Иконка.png" alt="Логотип" class="logo-icon">
+                <span>Кружок</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" id="homeNavLink">Главная</a>
+                <a href="#" id="roomsNavLink">Кружки</a>
+                <a href="#" id="supportNavLink">Поддержать</a>
+                <button class="btn-outline" id="authButton">Войти</button>
+            </div>
+        </div>
+    <div id="mainContent">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Твоё хобби — <br>в каждом кружке</h1>
+                <p>Бесплатные кружки для детей и подростков, где можно учиться, общаться и развиваться. Шахматы, языки, роботы, рисование — мир увлечений открыт!</p>
+                <button class="btn-primary">Выбрать кружок</button>
+            </div>
+            <div class="hero-side">
+                <img src="/Icons/Шахматы.png" alt="Шахматы" class="hero-img">
+                <div class="chinese-word">中文</div>
+            </div>
+        </div>
+
+        <div id="rooms-section">
+            <div class="filters-section">
+                <div class="filters-title">
+                    <i class="fas fa-sliders-h"></i> Фильтры
+                </div>
+                <div class="filters-container" id="filtersContainer">
+                    <button class="filter-btn active" data-filter="all">Все кружки</button>
+                    <button class="filter-btn" data-filter="sport">Спорт</button>
+                    <button class="filter-btn" data-filter="languages">Языки</button>
+                    <button class="filter-btn" data-filter="art">Творчество</button>
+                    <button class="filter-btn" data-filter="science">Наука</button>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h2>Актуальные кружки</h2>
+            </div>
+
+            <div class="rooms-grid" id="roomsGrid">
+                <div class="room-card" data-category="sport">
+                    <div class="card-img" style="background: linear-gradient(135deg, #2c6e2f, #3b8f3e);"></div>
+                    <div class="card-content">
+                        <h3>Большой теннис</h3>
+                        <p class="desc">Обучение технике ударов, работе ног. Различные подачи, отработка ударов. Подходит для новичков и продвинутых.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Большой теннис">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="sport">
+                    <div class="card-img" style="background: linear-gradient(135deg, #1e6f5c, #289d82);"></div>
+                    <div class="card-content">
+                        <h3>Настольный теннис</h3>
+                        <p class="desc">Тактика коротких и длинных подач. Обучение вращениям и постановке ног. Советы по хватке и выбору накладок.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Настольный теннис">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="languages">
+                    <div class="card-img" style="background: linear-gradient(135deg, #1e5a6f, #258ea6);"></div>
+                    <div class="card-content">
+                        <h3>Английский язык</h3>
+                        <p class="desc">Тактика запоминания слов через ассоциации. Обучение грамматическим конструкциям. Советы по разговорной практике без стеснения.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Английский язык">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="sport">
+                    <div class="card-img" style="background: linear-gradient(135deg, #d98c2b, #f4b942);"></div>
+                    <div class="card-content">
+                        <h3>Пляжный футбол</h3>
+                        <p class="desc">Тактика игры в меньшинстве на песке. Новости международных пляжных турниров. Обучение правилам (аут ногой, двойное касание).</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Пляжный футбол">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="sport">
+                    <div class="card-img" style="background: linear-gradient(135deg, #e84342, #c0392b);"></div>
+                    <div class="card-content">
+                        <h3>Волейбол</h3>
+                        <p class="desc">Подача, приём, блок. Командные тренировки и тактические схемы. Подготовка к школьным соревнованиям.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Волейбол">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="art">
+                    <div class="card-img" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);"></div>
+                    <div class="card-content">
+                        <h3>Творческая мастерская</h3>
+                        <p class="desc">Рисование, лепка, скетчинг. Изучаем разные техники и материалы. Развиваем воображение.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Творческая мастерская">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="science">
+                    <div class="card-img" style="background: linear-gradient(135deg, #3498db, #2980b9);"></div>
+                    <div class="card-content">
+                        <h3>Юный химик</h3>
+                        <p class="desc">Занимательные опыты, безопасные реактивы. Основы химии и научные эксперименты.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Юный химик">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="art">
+                    <div class="card-img" style="background: linear-gradient(135deg, #5d2e6b, #9b4d96);"></div>
+                    <div class="card-content">
+                        <h3>Дизайн</h3>
+                        <p class="desc">Тренды и новости в веб-дизайне. Тактика сочетания шрифтов и цветов. Советы по прототипированию в Figma.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Дизайн">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card" data-category="sport">
+                    <div class="card-img" style="background: linear-gradient(135deg, #0e2a3b, #1c4b6e);"></div>
+                    <div class="card-content">
+                        <h3>Киберспорт</h3>
+                        <p class="desc">Тактика заходов на точку (CS2) / контроль карты (Dota). Новости мейджоров. Обучение правилам тир-листов и драфта.</p>
+                        <div class="card-footer">
+                            <button class="join-btn" data-room-id="Киберспорт">Выбрать кружок →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-circle-wrapper">
+            <button id="addCircleBtn" class="create-room-btn-green"><i class="fas fa-plus"></i> Добавить кружок</button>
+        </div>
+    </div>
+        <footer>
+            <p>Кружок — бесплатная платформа для саморазвития детей и подростков. Создавайте кружок, делитесь увлечениями. Поможем узнать новое, открыть для себя другие сферы деятельности и саморазвития.</p>
+            <p>© 2025 Кружок | Твоё хобби — в каждом кружке</p>
+            <div class="social-links">
+                <span>Наши соц сети:</span>
+                <a href="#">Кружок</a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Создать новый кружок</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <label>Название кружка</label>
+                <input type="text" id="newRoomName" placeholder="Введите название" class="modal-input">
+                <label>Категория</label>
+                <select id="newRoomCategory" class="modal-input">
+                    <option value="sport">Спорт</option>
+                    <option value="languages">Языки</option>
+                    <option value="art">Творчество</option>
+                    <option value="science">Наука</option>
+                    <option value="other">Другое</option>
+                </select>
+                <label>Описание</label>
+                <textarea id="newRoomDesc" placeholder="Чем занимаются в кружке" class="modal-input" style="resize: vertical; height: 70px;"></textarea>
+                <label>Цвет карточки</label>
+                <div class="gradient-options" id="gradientOptions">
+                    <span class="gradient-preset active" style="background: linear-gradient(135deg, #2c6e2f, #3b8f3e);" data-gradient="linear-gradient(135deg, #2c6e2f, #3b8f3e)"></span>
+                    <span class="gradient-preset" style="background: linear-gradient(135deg, #1e6f5c, #289d82);" data-gradient="linear-gradient(135deg, #1e6f5c, #289d82)"></span>
+                    <span class="gradient-preset" style="background: linear-gradient(135deg, #1e5a6f, #258ea6);" data-gradient="linear-gradient(135deg, #1e5a6f, #258ea6)"></span>
+                    <span class="gradient-preset" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);" data-gradient="linear-gradient(135deg, #9b59b6, #8e44ad)"></span>
+                    <span class="gradient-preset" style="background: linear-gradient(135deg, #3498db, #2980b9);" data-gradient="linear-gradient(135deg, #3498db, #2980b9)"></span>
+                    <span class="gradient-preset" style="background: linear-gradient(135deg, #e84342, #c0392b);" data-gradient="linear-gradient(135deg, #e84342, #c0392b)"></span>
+                </div>
+                <input type="hidden" id="selectedGradient" value="linear-gradient(135deg, #2c6e2f, #3b8f3e)">
+                <button id="createRoomConfirm" class="btn-primary modal-btn">Создать кружок</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker зарегистрирован:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Ошибка регистрации Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Кружок — твоё хобби",
+  "short_name": "Кружок",
+  "description": "Бесплатные кружки для детей и подростков",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3b7b4a",
+  "background_color": "#fefdf8",
+  "icons": [
+    {
+      "src": "/Icons/Иконка.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
